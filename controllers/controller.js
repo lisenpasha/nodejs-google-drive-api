@@ -1,4 +1,4 @@
-const { upload_in_drive, download_from_drive } = require('../google-drive-api/ google_drive_functions');
+const { upload_in_drive, download_from_drive } = require('../google-drive-services/ google_drive_functions');
 
 
 const upload_in_drive_controller = async (req,res) => {
