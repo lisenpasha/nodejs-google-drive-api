@@ -68,8 +68,9 @@ Make the following changes:
 
 #### 4- Access the Endpoints:
 
-Upload Files: Send a POST request to http://localhost:8082/upload with a JSON body containing the files array.
-Download Files: Send a POST request to http://localhost:8082/download with a JSON body containing the files array.
+Upload Files: Send a POST request to `http://localhost:8082/upload` with a JSON body containing the files array.
+
+Download Files: Send a POST request to `http://localhost:8082/download` with a JSON body containing the files array.
 
 
 #### 5- Testing
