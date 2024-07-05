@@ -23,7 +23,7 @@ Create OAuth 2.0 credentials and download the client_secret.json file.
 
 ## Configuration:
 
-Navigate to the google-drive-services folder and open google_drive_functions.js.
+Navigate to the `google-drive-services` folder and open `google_drive_functions.js`.
 Make the following changes:
 
 ### Configuration Steps
