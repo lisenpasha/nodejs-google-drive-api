@@ -72,14 +72,6 @@ Upload Files: Send a POST request to `http://localhost:8082/upload` with a JSON 
 
 Download Files: Send a POST request to `http://localhost:8082/download` with a JSON body containing the files array.
 
-
-#### 5- Testing
-To run the tests using Jest, execute the following command:
-
-```bash
-   npm run test
-```
-
 #### Example JSON Body
 
 For both upload and download routes, the JSON body should look like this:
@@ -88,6 +80,14 @@ For both upload and download routes, the JSON body should look like this:
    {
      "files": ["dummy-file1.txt", "dummy-file2.txt"]
    }
+```
+
+
+#### 5- Testing
+To run the tests using Jest, execute the following command:
+
+```bash
+   npm run test
 ```
 
 
