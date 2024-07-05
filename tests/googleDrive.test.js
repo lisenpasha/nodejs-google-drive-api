@@ -5,9 +5,9 @@ const app = require('../index');
 const { promisify } = require('util');
 const sleep = promisify(setTimeout);
 
-const {delete_specified_files, listDriveFiles} = require ('../google-drive-api/read-files-in-folder')
+const {delete_specified_files, listDriveFiles} = require ('../google-drive-services/ google_drive_functions')
 
-const downloadedFilesDir = path.join(__dirname, '../google-drive-api/downloaded-files');
+const downloadedFilesDir = path.join(__dirname, '../google-drive-services/downloaded-files');
 
 afterAll(() => {
   // Force Jest to exit after all tests to prevent hanging due to open handles
@@ -21,7 +21,7 @@ describe('Google Drive Api Test, check upload and download.', () => {
     await fs.emptyDir(downloadedFilesDir); //empty downloaded-files for correct comparison..
     const filesToDownload = ['dummy-image.png', 'random.jpg']; 
     const response = await request(app)
-      .post('/books/download')
+      .post('/download')
       .send({ files: filesToDownload })
       .expect('Content-Type', /json/)
       .expect(200);
@@ -32,6 +32,7 @@ describe('Google Drive Api Test, check upload and download.', () => {
     // Verify that the files are downloaded
     for (const file of filesToDownload) {
       const filePath = path.join(downloadedFilesDir, file);
+      console.log("filePath",filePath)
       expect(fs.existsSync(filePath)).toBe(true);
     }
 
@@ -44,7 +45,7 @@ describe('Google Drive Api Test, check upload and download.', () => {
     const filesToUpload = ['dummy-file1.txt', 'dummy-file2.txt']; 
     await delete_specified_files(filesToUpload) //delete the files if they already exist to make sure for best approach.
     const response = await request(app)
-      .post('/books/upload')
+      .post('/upload')
       .send({ files: filesToUpload })
       .expect('Content-Type', /json/)
       .expect(200);
