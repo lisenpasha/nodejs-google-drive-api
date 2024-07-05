@@ -1,6 +1,6 @@
 # Node.js Google Drive API
 
-Description
+### Description
 This API provides endpoints to upload and download files from Google Drive. The API offers two routes:
 
 Upload Files: http://localhost:8082/upload
@@ -9,10 +9,10 @@ Download Files: http://localhost:8082/download
 
 Both endpoints expect a JSON body with an array named files, containing the full names of the files.
 
-Prerequisites
+### Prerequisites
 Before you can use this API, you need to configure it by following these steps:
 
-Google Drive Setup:
+## Google Drive Setup:
 
 Create a project in the Google Developer Console.
 Enable the Google Drive API for your project.
@@ -24,5 +24,5 @@ Make the following changes:
 Configuration Steps
 Set the Google Drive Folder ID:
 
-Line 7: Replace 'folder_id' with the ID of the Google Drive folder you want to work with.
+## Line 7: Replace 'folder_id' with the ID of the Google Drive folder you want to work with.
 const folderId = 'your_google_drive_folder_id';
