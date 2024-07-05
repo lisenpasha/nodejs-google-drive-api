@@ -9,6 +9,8 @@ Download Files: http://localhost:8082/download
 
 Both endpoints expect a JSON body with an array named files, containing the full names of the files.
 
+Files will be downloaded to the `downloaded-files` folder inside `google-drive-services`, and only files inside the `temp` folder can be uploaded to Google Drive. You can change these paths accordingly in `google_drive_functions.js`.
+
 ### Prerequisites
 Before you can use this API, you need to configure it by following these steps:
 
