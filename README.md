@@ -25,4 +25,6 @@ Configuration Steps
 Set the Google Drive Folder ID:
 
 ## Line 7: Replace 'folder_id' with the ID of the Google Drive folder you want to work with.
-const folderId = 'your_google_drive_folder_id';
+```bash
+   const folderId = 'your_google_drive_folder_id';
+```
